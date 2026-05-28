@@ -283,9 +283,6 @@ php -S localhost:8000
 
 ---
 
-## Team & Contact
-
-- **[Mehdi]** — *Développeur Full-Stack*
 
 Pour toute question, suggestion ou rapport de bug, ouvrir une Issue sur le dépôt GitHub ou contacter directement via email.
 
