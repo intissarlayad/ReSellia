@@ -1,101 +1,95 @@
 <div align="center">
 
+# Resellia-ensam-market
 
-  <h1>ReSellia — ENSAM Market</h1>
-  <p><strong>Plateforme e-commerce étudiante réservée à l'ENSAM Meknès</strong></p>
+**A full-stack student-to-student e-commerce platform — built exclusively for ENSAM Meknès**
 
-  <!-- Badges -->
-  <p>
-    <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white" />
-    <img src="https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white" />
-    <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-    <img src="https://img.shields.io/badge/Version-v1.0-58a6ff?style=flat-square" />
-    <img src="https://img.shields.io/badge/Status-En%20ligne-success?style=flat-square" />
-    <img src="https://img.shields.io/badge/Hosted-InfinityFree-6c47ff?style=flat-square" />
-  </p>
+<p>
+  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Version-v1.0-58a6ff?style=flat-square" />
+  <img src="https://img.shields.io/badge/Status-Live-28a745?style=flat-square" />
+  <img src="https://img.shields.io/badge/Hosted-InfinityFree-6c47ff?style=flat-square" />
+</p>
 
-  <div align="center">
-    <h2>🌐 L'Application est en ligne !</h2>
-    <a href="https://monprojetphp.infinityfreeapp.com/">
-      <img src="https://img.shields.io/badge/🚀_Accéder_à_ENSAM_Market-166534?style=for-the-badge&logo=php" alt="Launch App" />
-    </a>
-  </div>
+<h3>🌐 Live Application</h3>
+<a href="https://monprojetphp.infinityfreeapp.com/">
+  <img src="https://img.shields.io/badge/🚀_Open_ENSAM_Market-166534?style=for-the-badge&logo=php" alt="Launch App" />
+</a>
 
-  <p>
-    <em>Achetez & Vendez entre étudiants ENSAM — simplement, localement, en confiance</em>
-  </p>
+<br/><br/>
 
-  <p>
-    <b>Catégories :</b> 8 (Livres, Électronique, Vêtements, Services…) &nbsp;&nbsp;•&nbsp;&nbsp;
-    <b>Tables DB :</b> 9 &nbsp;&nbsp;•&nbsp;&nbsp;
-    <b>Modes utilisateur :</b> Acheteur / Vendeur / Admin
-  </p>
+*Buy & sell between ENSAM students — simply, locally, and securely*
+
+**Categories:** 8 (Books, Electronics, Clothing, Services…) &nbsp;•&nbsp;
+**DB Tables:** 9 &nbsp;•&nbsp;
+**User Modes:** Buyer / Seller / Admin
+
 </div>
 
 ---
 
 ## Table of Contents
 
-1. [Vue d'ensemble](#vue-densemble)
-2. [Solution & Concept](#solution--concept)
-3. [Architecture du projet](#architecture-du-projet)
-4. [Base de données & Modèle](#base-de-données--modèle)
-5. [Fonctionnalités par module](#fonctionnalités-par-module)
-6. [Sécurité](#sécurité)
-7. [Screenshots](#screenshots)
-8. [Getting Started & Déploiement](#getting-started--déploiement)
-9. [Installation locale](#installation-locale)
-10. [Roadmap](#roadmap)
-11. [Team & Contact](#team--contact)
+1. [Overview](#overview)
+2. [Concept & Problem Solved](#concept--problem-solved)
+3. [Project Structure](#project-structure)
+4. [Database Schema](#database-schema)
+5. [Features by Module](#features-by-module)
+6. [Security](#security)
+7. [Getting Started](#getting-started)
+8. [Local Installation](#local-installation)
+9. [Roadmap](#roadmap)
 
 ---
 
-## Vue d'ensemble
+## Overview
 
-Les étudiants de l'ENSAM ont besoin d'échanger livres, polycopiés, matériel et services entre eux — sans passer par des plateformes génériques non adaptées au contexte campus.
+ENSAM students need a way to exchange textbooks, course materials, equipment, and services among themselves — without relying on generic platforms disconnected from campus life.
 
-**ReSellia** est une plateforme e-commerce complète, construite de A à Z en PHP/MySQL avec architecture MVC, réservée aux étudiants de l'ENSAM Meknès. Elle offre une expérience double-profil (Acheteur ↔ Vendeur), un workflow complet de commandes, une API interne AJAX, et un panneau d'administration pour les modérateurs BDE.
-
----
-
-## Solution & Concept
-
-**Ce que fait la plateforme :** ReSellia permet à chaque étudiant de publier des annonces, parcourir un catalogue filtrable, passer des commandes et suivre ses achats — le tout dans un environnement sécurisé et validé par des administrateurs.
-
-**Pourquoi c'est adapté au campus :** Le règlement se fait en espèces ou virement direct entre étudiants (remise sur campus), sans paiement en ligne, sans intermédiaire externe. La plateforme est pensée pour la confiance entre pairs.
+**ReSellia** is a complete e-commerce platform built from scratch in PHP/MySQL following an MVC architecture, exclusively for ENSAM Meknès students. It features a dual-profile experience (Buyer ↔ Seller), a full order management workflow, an internal AJAX API, and an admin panel for BDE moderators.
 
 ---
 
-## Architecture du projet
+## Concept & Problem Solved
 
-L'architecture suit un pattern **MVC** clair avec séparation stricte des responsabilités :
+**What the platform does:** ReSellia lets any student publish listings, browse a filterable catalogue, place orders, and track purchases — all within a verified, admin-moderated environment.
+
+**Why it fits the campus context:** Payments are handled directly between students in cash or bank transfer (on-campus pickup), with no online payment gateway or external intermediary. The platform is designed around peer trust within a closed academic community.
+
+---
+
+## Project Structure
+
+The architecture follows a clear **MVC pattern** with strict separation of concerns:
 
 ```
-ReSellia/
+resellia/
 │
-├── index.php                   # Homepage — produits récents + stats globales
-├── shop.php                    # Catalogue avec filtres, tri, pagination
-├── product.php                 # Fiche produit + produits similaires
+├── index.php                   # Homepage — recent listings + global stats
+├── shop.php                    # Catalogue with filters, sort, pagination
+├── product.php                 # Product page + similar listings
 ├── faq.php / regles.php / contact.php
 │
-├── auth/                       # Inscription, connexion, reset mot de passe
+├── auth/                       # Sign up, login, password reset
 │   ├── login.php
 │   ├── register.php
 │   └── forgot-password.php
 │
-├── account/                    # Profil, paramètres, switch-mode
+├── account/                    # Profile, settings, mode switch
 │   ├── profile.php
 │   ├── settings.php
 │   └── switch-mode.php
 │
-├── buyer/                      # Espace Acheteur
+├── buyer/                      # Buyer space
 │   ├── cart.php
 │   ├── checkout.php
 │   ├── orders.php
 │   ├── order-detail.php
 │   └── wishlist.php
 │
-├── seller/                     # Espace Vendeur
+├── seller/                     # Seller space
 │   ├── dashboard.php
 │   ├── product-add.php
 │   ├── product-edit.php
@@ -103,191 +97,170 @@ ReSellia/
 │   ├── products.php
 │   └── orders.php
 │
-├── admin/                      # Panneau Administrateur BDE
+├── admin/                      # BDE Admin panel
 │   ├── index.php
 │   ├── users.php
 │   ├── products.php
 │   ├── orders.php
 │   └── reports.php
 │
-├── api/                        # Endpoints AJAX internes
+├── api/                        # Internal AJAX endpoints
 │   ├── wishlist-toggle.php
 │   ├── product-search.php
 │   ├── cart-add.php
 │   └── cart-remove.php
 │
-├── includes/                   # Couche infrastructure
-│   ├── db.php                  # Connexion PDO
+├── includes/                   # Infrastructure layer
+│   ├── db.php                  # PDO connection
 │   ├── functions.php           # Sanitisation, CSRF, auth helpers
 │   ├── config.php              # BASE_URL
 │   ├── header.php / footer.php
-│   ├── auth-guard.php          # Middleware : authentification requise
-│   ├── seller-guard.php        # Middleware : mode vendeur requis
-│   └── admin-guard.php         # Middleware : rôle admin requis
+│   ├── auth-guard.php          # Middleware: authentication required
+│   ├── seller-guard.php        # Middleware: seller mode required
+│   └── admin-guard.php         # Middleware: admin role required
 │
 ├── assets/                     # CSS, JS, images
-└── database/                   # Schéma SQL complet
+└── database/
+    └── ensam_market.sql        # Full database schema
 ```
 
 ---
 
-## Base de données & Modèle
+## Database Schema
 
-Le schéma comprend **9 tables** couvrant l'intégralité du domaine :
+The schema includes **9 tables** covering the full business domain:
 
-| Table | Description | Colonnes clés |
+| Table | Description | Key Columns |
 |---|---|---|
-| `users` | Étudiants (acheteurs & vendeurs) | `mode_actuel`, `role`, `is_verified` |
-| `categories` | 8 catégories de produits | `slug`, `icon` |
-| `products` | Annonces publiées par les vendeurs | `status` (active/pending/banned), `condition_p`, `views` |
-| `orders` | Commandes passées par les acheteurs | `status` (5 états), `address`, `note` |
-| `order_items` | Lignes de commande (produit × qté × prix) | `qty`, `price_unit` |
-| `cart` | Panier en cours | `qty` |
-| `wishlist` | Articles sauvegardés | `user_id`, `product_id` |
-| `reviews` | Avis sur les vendeurs | `rating`, `seller_id` |
-| `reports` | Signalements de produits inappropriés | `reason`, `status` |
+| `users` | Student accounts (buyers & sellers) | `mode_actuel`, `role`, `is_verified` |
+| `categories` | 8 product categories | `slug`, `icon` |
+| `products` | Listings published by sellers | `status` (active / pending / banned), `condition_p`, `views` |
+| `orders` | Orders placed by buyers | `status` (5 states), `address`, `note` |
+| `order_items` | Order lines (product × qty × unit price) | `qty`, `price_unit` |
+| `cart` | Active shopping cart | `qty` |
+| `wishlist` | Saved items | `user_id`, `product_id` |
+| `reviews` | Seller ratings & reviews | `rating`, `seller_id` |
+| `reports` | Inappropriate listing reports | `reason`, `status` |
 
-> Le schéma SQL complet est disponible dans `database/ensam_market.sql`
-
----
-
-## Fonctionnalités par module
-
-### 🛍️ Espace Acheteur
-
-| Fonctionnalité | Détail |
-|---|---|
-| Catalogue filtrable | Par catégorie, état (`neuf` / `bon_etat` / `usage`), tri prix/date/popularité |
-| Panier | Ajout/suppression AJAX, persistance session |
-| Checkout | Adresse de livraison ou point de retrait campus |
-| Suivi commandes | 5 statuts : `pending → confirmed → shipped → delivered → cancelled` |
-| Wishlist | Toggle AJAX, liste personnelle |
-| Fiche produit | Galerie images, infos vendeur, note moyenne, produits similaires |
-
-### 🏪 Espace Vendeur
-
-| Fonctionnalité | Détail |
-|---|---|
-| Dashboard | Vue d'ensemble des annonces et commandes reçues |
-| Nouvelle annonce | Upload multi-photos, description, prix, état — soumis en `pending` |
-| Édition & suppression | Après modification, repasse en validation admin |
-| Gestion commandes | Confirmer, expédier, livrer ou annuler |
-
-### 🔐 Authentification & Comptes
-
-| Fonctionnalité | Détail |
-|---|---|
-| Inscription | Email + mot de passe + filière + promo |
-| Connexion / Déconnexion | Session sécurisée |
-| Mot de passe oublié | Token de réinitialisation |
-| Profil & avatar | Mise à jour des informations personnelles |
-| Switch de mode | Basculement instantané Acheteur ↔ Vendeur |
-
-### 🛠️ Panneau Administrateur
-
-| Fonctionnalité | Détail |
-|---|---|
-| Modération annonces | Valider / refuser les produits `pending` |
-| Gestion utilisateurs | Suspensions, rôles |
-| Suivi global commandes | Vue de toutes les transactions |
-| Rapports & statistiques | Activité globale de la plateforme |
-| Traitement signalements | Examiner et résoudre les reports |
+> The full SQL schema is available in `database/ensam_market.sql`
 
 ---
 
-## Sécurité
+## Features by Module
 
-| Mécanisme | Implémentation |
+### 🛍️ Buyer Space
+
+| Feature | Detail |
 |---|---|
-| Hachage mots de passe | `bcrypt` via `password_hash()` |
-| Protection CSRF | Token généré par `random_bytes(32)`, vérifié sur chaque POST |
-| Sanitisation | `strip_tags()` + `htmlspecialchars()` sur toutes les entrées |
-| Requêtes SQL | 100% préparées avec PDO — zéro injection SQL possible |
-| Guards middleware | `auth-guard`, `seller-guard`, `admin-guard` sur chaque espace protégé |
+| Filterable catalogue | By category, condition (`new` / `good` / `used`), sorted by price / date / popularity |
+| Shopping cart | AJAX add/remove, session persistence |
+| Checkout | Delivery address or on-campus pickup point |
+| Order tracking | 5 statuses: `pending → confirmed → shipped → delivered → cancelled` |
+| Wishlist | AJAX toggle, personal saved list |
+| Product page | Image gallery, seller info, average rating, similar listings |
+
+### 🏪 Seller Space
+
+| Feature | Detail |
+|---|---|
+| Dashboard | Overview of active listings and incoming orders |
+| New listing | Multi-photo upload, description, price, condition — submitted as `pending` |
+| Edit & delete | After any edit, listing returns to admin validation queue |
+| Order management | Confirm, ship, deliver, or cancel orders |
+
+### 🔐 Authentication & Accounts
+
+| Feature | Detail |
+|---|---|
+| Registration | Email + password + field of study + year |
+| Login / Logout | Secure session management |
+| Forgot password | Token-based reset flow |
+| Profile & avatar | Personal information update |
+| Mode switch | Instant Buyer ↔ Seller toggle on a single account |
+
+### 🛠️ Admin Panel
+
+| Feature | Detail |
+|---|---|
+| Listing moderation | Approve or reject `pending` products |
+| User management | Suspensions, role assignment |
+| Global order tracking | View across all transactions |
+| Reports & stats | Platform-wide activity overview |
+| Report handling | Review and resolve flagged listings |
 
 ---
 
-## Screenshots
+## Security
 
-### 🔹 Homepage — Catalogue produits
-> *(Capture : `assets/screenshots/homepage.png`)*
-
-### 🔹 Dashboard Vendeur
-> *(Capture : `assets/screenshots/seller-dashboard.png`)*
-
-### 🔹 Panneau Administrateur
-> *(Capture : `assets/screenshots/admin-panel.png`)*
-
-### 🔹 Fiche Produit
-> *(Capture : `assets/screenshots/product-detail.png`)*
+| Mechanism | Implementation |
+|---|---|
+| Password hashing | `bcrypt` via `password_hash()` |
+| CSRF protection | Token generated with `random_bytes(32)`, verified on every POST |
+| Input sanitisation | `strip_tags()` + `htmlspecialchars()` on all user input |
+| SQL injection | 100% PDO prepared statements — zero raw queries |
+| Middleware guards | `auth-guard`, `seller-guard`, `admin-guard` on every protected route |
 
 ---
 
-## Getting Started & Déploiement
+## Getting Started
 
-## Déploiement Cloud
+ReSellia is live and requires no installation. Any ENSAM student can register and use the platform directly.
 
-ReSellia est hébergé et accessible sans aucune installation. N'importe quel étudiant ENSAM peut s'inscrire et utiliser la plateforme directement en ligne.
+**🔗 Live URL:** [monprojetphp.infinityfreeapp.com](https://monprojetphp.infinityfreeapp.com/)
 
-**🔗 Lien de l'application :** [monprojetphp.infinityfreeapp.com](https://monprojetphp.infinityfreeapp.com/)
-
-### Workflow utilisateur :
-1. **Accès** : L'étudiant ouvre le lien et arrive sur la homepage avec les derniers produits.
-2. **Inscription** : Création de compte avec email et infos ENSAM (filière, promo).
-3. **Navigation** : Parcours du catalogue filtré, ajout au panier ou à la wishlist.
-4. **Achat** : Checkout → le vendeur reçoit la commande et organise la remise sur campus.
-5. **Vente** : Basculer en mode Vendeur → publier une annonce → attendre validation admin → annonce en ligne.
+**User workflow:**
+1. **Access** — Open the link and land on the homepage with the latest listings.
+2. **Register** — Create an account with your email and ENSAM details (field, year).
+3. **Browse** — Filter the catalogue, add items to your cart or wishlist.
+4. **Buy** — Checkout → the seller receives the order and arranges on-campus handoff.
+5. **Sell** — Switch to Seller mode → publish a listing → wait for admin approval → listing goes live.
 
 ---
 
-## Installation locale
+## Local Installation
 
-**Prérequis :** PHP 8.x · MySQL 5.7+ · Apache/Nginx (ou XAMPP/WAMP)
+**Prerequisites:** PHP 8.x · MySQL 5.7+ · Apache/Nginx (or XAMPP/WAMP)
 
 ```bash
-# 1. Cloner le dépôt
-git clone https://github.com/intissarlayad/resellia.git
-cd resellia
+# 1. Clone the repository
+git clone https://github.com/<your-username>/resellia-ensam-market.git
+cd resellia-ensam-market
 
-# 2. Importer la base de données
+# 2. Import the database
 mysql -u root -p < database/ensam_market.sql
 
-# 3. Configurer la connexion BD
-# Éditer includes/db.php avec tes identifiants MySQL
+# 3. Configure the DB connection
+# Edit includes/db.php with your MySQL credentials
 
-# 4. Configurer le BASE_URL
-# Éditer includes/config.php
-define('BASE_URL', '/resellia/');
+# 4. Set the base URL
+# Edit includes/config.php
+define('BASE_URL', '/resellia-ensam-market/');
 
-# 5. Lancer (CLI)
+# 5. Start the dev server (CLI)
 php -S localhost:8000
 
-# ou déposer dans htdocs/ (XAMPP) et accéder via http://localhost/resellia/
+# OR drop the folder into htdocs/ (XAMPP) and open:
+# http://localhost/resellia-ensam-market/
 ```
 
 ---
 
 ## Roadmap
 
-- [x] Architecture MVC complète avec guards middleware
-- [x] Double mode Acheteur / Vendeur sur compte unique
-- [x] Panier et wishlist AJAX sans rechargement
-- [x] Workflow commandes avec 5 statuts
-- [x] Panneau admin avec modération, rapports, gestion users
-- [x] Déploiement cloud sur InfinityFree
-- [ ] Système de messagerie interne entre acheteur et vendeur
-- [ ] Notifications en temps réel (nouvelles commandes, validation annonce)
-- [ ] Avis et notation vendeurs (interface front complète)
-- [ ] Export PDF des commandes / factures
-- [ ] Intégration paiement mobile (CMI, Wave…)
-
----
-
-
-Pour toute question, suggestion ou rapport de bug, ouvrir une Issue sur le dépôt GitHub ou contacter directement via email.
+- [x] Full MVC architecture with role-based middleware guards
+- [x] Dual Buyer / Seller mode on a single account
+- [x] AJAX cart and wishlist without page reload
+- [x] Order workflow with 5 statuses
+- [x] Admin panel with moderation, reports, and user management
+- [x] Cloud deployment on InfinityFree
+- [ ] Internal messaging system between buyer and seller
+- [ ] Real-time notifications (new orders, listing approval)
+- [ ] Full seller rating & review front-end
+- [ ] PDF export for orders and invoices
+- [ ] Mobile payment integration (CMI, Wave…)
 
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for the ENSAM Meknès student community. Projet de développement e-commerce.</sub>
+  <sub>Built for the ENSAM Meknès student community — peer-to-peer commerce, on campus.</sub>
 </div>
